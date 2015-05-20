@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title>Mapa ni SARAI</title>
+	<meta charset="utf-8" />
+	<!-- with Materialize and imports Leaflet -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+
+	<link rel="stylesheet" href="js/leaflet/leaflet.css" />
+	<link rel="stylesheet" type="text/css" href="css/own_style.css" media="screen,projection"/>
+	<link rel="stylesheet" href="css/label.css" />
+
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+
+	<!-- previous jQuery  -->
+	<script src="js/jquery-1.11.1.min.js"></script> 
+	<!-- 
+	<script src="js/Autolinker.min.js"></script> -->
+</head>
+<body>
+	<nav class="light-blue lighten-1">
+		<ul class="right hide-on-med-and-down">
+				<li><a href="#!">First Sidebar Link</a></li>
+				<li><a href="#!">Second Sidebar Link</a></li>
+			</ul>
+			<ul id="slide-out" class="side-nav">
+				<li><a href="#!">First Sidebar Link</a></li>
+				<li><a href="#!">Second Sidebar Link</a></li>
+			</ul>
+		<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+		<!-- SideNav script -->
+		<script>
+		// Initialize collapse button
+			$(".button-collapse").sideNav({
+				menuWidth: 300, // Default is 240
+				edge: 'left', // Choose the horizontal origin
+				closeOnClick: true
+			});
+		</script>
+	</nav>
+</body>
+</html>

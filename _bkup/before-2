@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<title>Mapa ni SARAI</title>
+	<meta charset="utf-8" />
+	<!-- with Materialize and imports Leaflet -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+
+	<link rel="stylesheet" href="js/leaflet/leaflet.css" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen,projection"/>
+	<link rel="stylesheet" href="css/label.css" />
+
+	<link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
+
+</head>
+<body>
+	<div class="row">
+
+		<div class="col l10 m8 s7">
+			<div class="row" style="margin: 0px">
+				<!-- Province and crop selectors -->
+					<!-- TODO: make a Mongo collection for provinces list? -->
+					<div class="col s6">
+					<select>
+						<option value="0" selected><p class="map-helpers">Select province</p></option>
+						<option value="1">Abra</option>
+						<option value="2">Agusan del Norte</option>
+						<option value="3">Aklan</option>
+						<option value="3">...</option>
+					</select>
+					</div>
+					<div class="col s6">
+					<select>
+						<option value="0" selected><p class="map-helpers">Select crop</p></option>
+						<option value="1">Rice</option>
+						<option value="2">Corn</option>
+						<option value="3">Banana</option>
+						<option value="4">Cacao</option>
+						<option value="5">Coffee</option>
+						<option value="6">Coconut</option>
+					</select>
+					</div>
+			</div>
+			<div id="mns-map" class="z-depth-2"></div>
+		</div>
+		<!-- Side nav (more or less) -->
+		<div class="col l2 m4 s5">
+			<h5>Data Overlays<br /></h5>
+
+			<ul class="collection">
+				<li class="collection-item">
+					<input type="checkbox" class="filled-in center-align" id="suitability"/>
+					<label class="black-label" for="suitability"><i class="mdi-maps-beenhere"></i>&nbsp;Suitability</label><br />
+				</li>
+				<li class="collection-item">
+					<input type="checkbox" class="filled-in center-align" id="vulnerability"/>
+					<label class="black-label" for="vulnerability"><i class="mdi-av-new-releases"></i>&nbsp;Vulnerability</label><br />
+				</li>
+
+				<li class="collection-item">
+					<input type="checkbox" class="filled-in center-align" id="hazard"/>
+					<label class="black-label" for="hazard"><i class="mdi-alert-warning"></i>&nbsp;Hazard</label><br />
+				</li>
+			</ul>
+
+			<ul class="collapsible" data-collapsible="expandable">
+				<li>
+					<div class="collapsible-header active"><i class="mdi-maps-beenhere"></i>Suitability</div>
+					<div class="collapsible-body">
+						
+					</div>
+
+				</li>
+				<li>
+					<div class="collapsible-header"><i class="mdi-av-new-releases"></i>Vulnerability</div>
+					<div class="collapsible-body">
+						<p>
+							<form action="#">
+								<input name="group1" type="radio" id="test1" />
+								<label for="test1">Red</label>
+								<input name="group1" type="radio" id="test1" />
+								<label for="test1">Red</label>
+								<input name="group1" type="radio" id="test1" />
+								<label for="test1">Red</label>
+								<input name="group1" type="radio" id="test1" />
+								<label for="test1">Red</label>
+							</form>
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="collapsible-header"><i class="mdi-alert-warning"></i>Hazard</div>
+					<div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+				</li>
+			</ul>
+
+			<h5>Helpers</h5>
+			<ul class="collection">
+				<li class="collection-item">
+					<p class="no-margin map-helpers center-align" style="font-size: 14px">Hover province border</p>
+					<div class="switch center-align">
+						<label>
+							Off
+							<input type="checkbox">
+							<span class="lever"></span>
+							On
+						</label>
+					</div></li>
+
+					<li class="collection-item"><p class="range-field no-margin map-helpers center-align">Overlay opacity
+						<input type="range" id="ol-opac" min="0" max="100" />
+					</p></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- Materialize JS -->
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/init.js"></script>
+	<!-- libraries -->
+	<script src="js/leaflet/leaflet.js"></script>
+	<script src="js/label.js"></script>
+	<!-- data -->
+	<script src="data/land-use.js" ></script>
+	<!-- app -->
+	<script src="js/main-map.js"></script> 
+</body>
+</html>
