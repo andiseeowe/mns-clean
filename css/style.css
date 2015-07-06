@@ -1,20 +1,5 @@
 /* Leaftlet defaults */
 
-body {
-	padding: 0;
-	margin: 0;
-}
-html, body, #map {
-	height: 100%;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-}
-th {
-	text-align: left;
-	vertical-align: top;
-}
-
 .info, .leaflet-popup-content-wrapper {
 	padding: 6px 6px;
 	font: 14px/16px Arial, Helvetica, sans-serif;
@@ -43,9 +28,8 @@ th {
 	margin-top: 0px;
 }
 
-.map-helpers {
-	font-weight: 300;
-	font-style: italic;
+.select-em-text {
+
 }
 
 #mns-map {
@@ -53,12 +37,18 @@ th {
 	background-color: black;
 }
 
-/* Materialize override cuz im da baws */
+/* Leaflet overrides */
 
-[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-	position: inherit;
-	left: inherit;
+/* .leaflet-top {
+	z-index: 1;
 }
+z-index problem */
+
+.select-wrapper > ul { /* z-index problem */
+	z-index: 1001;
+}
+
+/* Materialize override cuz im da baws */
 
 .collapsible-body form {
 	padding-left: 1em;
@@ -66,12 +56,19 @@ th {
 	margin-bottom: 0.5em;
 }
 
-.dis-laybehl {
-	position: inherit;
+
+.collapsible-body .collapsible-item {
+	color: black;
+	display: list-item;
 }
 
-.black-label {
-	color: black;
+
+/*.def-select {  default select, overriding hidden when materialize_select not initialized 
+	display: inline;
+}*/
+
+.req-text {
+	font-style: italic;
 }
 
 /* THE OTHERS */
